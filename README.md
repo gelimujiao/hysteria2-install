@@ -97,5 +97,5 @@ sudo ./hy2-install.sh --uninstall
 
 
 如果你觉得此脚本，不错，请我喝一杯咖啡吧！！！
+![35cb34c265e0eef9049fd154068626b5](https://github.com/user-attachments/assets/80e60f03-7a94-445d-aa79-190db21ef9b3)
 
-<img src="file:///C:/Users/Administrator/AppData/Roaming/marktext/images/2026-04-08-12-26-42-35cb34c265e0eef9049fd154068626b5.jpg" title="" alt="" width="337">
