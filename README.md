@@ -24,15 +24,16 @@
 
 ## 🚀 快速开始
 
-### 1. 环境要求
+1. 环境要求
 
 - **操作系统**：Ubuntu / Debian / CentOS / Rocky Linux / AlmaLinux / Fedora
 - **权限**：必须以 `root` 用户运行
-- **端口**：确保服务商开放了 `UDP 443` 和 `TCP 80/443` ### 2. 一键安装 ```bash
+- **端口**：确保服务商开放了 `UDP 443` 和 `TCP 80/443`
+   2. 一键安装 ```bash
   
   # 下载脚本
   
-  wget -O hy2-install.sh https://github.com/你的用户名/你的仓库名/raw/main/hy2-install.sh
+  wget -O hy2-install.sh https://github.com/gelimujiao/hysteria2-install.git
   
   # 赋予执行权限
   
