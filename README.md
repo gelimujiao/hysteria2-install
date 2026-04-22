@@ -5,19 +5,28 @@
 ### 🛡️ 极致伪装 (Advanced Masquerading)
 
 - **Nginx 深度集成**：自动安装并配置 Nginx，将非法请求转发至真实的 Web 页面。
+
 - **流量分流架构**：
+  
   - `UDP 443` $\rightarrow$ Hysteria 2 (高速加密隧道)
   - `TCP 443/80` $\rightarrow$ Nginx (伪装成正常的 HTTPS/HTTP 网站)
+
 - **多样化模板**：内置企业级响应式 HTML 模板，支持远程 URL 导入或本地目录同步。
   
   ### 🔑 智能证书管理 (Smart Certs)
+
 - **ACME 自动化**：输入域名时自动通过 `acme.sh` 申请受信任的正规证书（无需手动配置 API）。
+
 - **智能回退机制**：若域名申请失败（如 DNS 未生效），脚本将**自动探测服务器公网 IP** $\rightarrow$ 切换为 IP 模式 $\rightarrow$ 生成自签名证书，确保部署不中断。
+
 - **自适应配置**：根据证书模式自动生成 `insecure=0` (正规) 或 `insecure=1` (自签) 的连接 URI。
   
   ### 🛠️ 工业级部署优化 (Industrial Grade)
+
 - **端口强制清理**：执行前自动扫描 80/443 端口，强制终止冲突进程（如 Apache, 旧版 Nginx），确保一次启动成功。
+
 - **全自动防火墙**：智能识别并配置 `ufw` / `firewall-cmd` / `iptables`。
+
 - **系统级管理**：自动创建 Systemd 服务，支持开机自启与自动崩溃重启。
 
 ---
@@ -25,26 +34,29 @@
 ## 🚀 快速开始
 
 1. 环境要求
-
 - **操作系统**：Ubuntu / Debian / CentOS / Rocky Linux / AlmaLinux / Fedora
+
 - **权限**：必须以 `root` 用户运行
+
 - **端口**：确保服务商开放了 `UDP 443` 和 `TCP 80/443`
-   2. 一键安装 ```bash
+  
+  2. 一键安装 ```bash
   
   # 下载脚本
   
-  wget -O hy2-install.sh https://github.com/gelimujiao/hysteria2-install.git
-  
-  # 赋予执行权限
+  git clone https://github.com/gelimujiao/hysteria2-install.git  
+  cd hysteria2-install
   
   chmod +x hy2-install.sh
   
   # 运行脚本
   
   sudo ./hy2-install.sh
+
 - ### 3. 配置步骤
   
   运行脚本后，按照交互提示操作：
+  
   1. **选择模板**：建议选择 1) NovaStream 或上传你自己的 HTML 目录。
   
   2. **输入 Host**：输入你的 **域名** (推荐) 或 **服务器 IP**。
@@ -78,8 +90,6 @@ graph TD
 
 - **通用**: [Clash Meta / Mihomo](https://www.google.com/url?sa=E&q=https%3A%2F%2Fgithub.com%2FMetaCubeX%2Fmihomo) (需转换配置文件)
 
-
-
 ## 卸载服务
 
 若需完全删除 Hysteria 2 及 Nginx 伪装环境，运行：
@@ -94,8 +104,4 @@ sudo ./hy2-install.sh --uninstall
 
 本工具仅用于学习研究网络协议及提升网络质量。请在遵守当地法律法规的前提下使用。作者不对任何因使用本工具而导致的账户封禁或法律问题负责。
 
-
-
-如果你觉得此脚本，不错，请我喝一杯咖啡吧！！！
-![35cb34c265e0eef9049fd154068626b5](https://github.com/user-attachments/assets/80e60f03-7a94-445d-aa79-190db21ef9b3)
-
+如果你觉得此脚本不错，请点一个star吧！
